@@ -1,0 +1,271 @@
+@font-face {
+  font-family: "Poiret One";
+  src: local("Poiret One"),
+    url("./assets/PoiretOne-Regular.ttf") format("truetype"),
+    url("../fonts/myfont.woff") format("woff");
+  font-display: swap;
+}
+
+:root {
+  --foreground: black;
+  --background: white;
+  --accent: black;
+  --hover: #86adff;
+  scroll-behavior: smooth;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Poiret One", cursive;
+  cursor: url("./assets/cur-export.cur"), auto;
+}
+
+.home,
+.mid h3,
+.line,
+.theme,
+a {
+  transition: background-color 300ms ease, color 300ms ease,
+    border-color 300ms ease;
+}
+
+.page-size {
+  height: 100dvh;
+}
+
+.content-height {
+  height: max-content;
+}
+
+.home {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: none;
+  border-bottom: none;
+  background-color: var(--background);
+  color: var(--foreground);
+}
+
+header .name-heading {
+  text-align: left;
+  margin-left: 5%;
+  transition: 0.5s color;
+}
+
+.name-heading:hover {
+  color: var(--hover);
+}
+
+/* footer .name-heading {
+            text-align: right;
+        } */
+
+.mid {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  height: 100vh;
+  height: 100dvh;
+  margin-right: 10px;
+}
+
+.mid a {
+  transform: rotate(-90deg);
+  transition: transform 0.5s ease, background 0.3s ease;
+}
+
+.mid a:hover {
+  transform: translateY(0) rotate(0deg);
+  transition: transform 350ms ease, opacity 200ms ease;
+  color: var(--hover);
+}
+
+.mid h3 {
+  background: var(--background);
+  border-radius: 200px;
+  padding: 20px;
+  position: relative;
+  z-index: 10;
+}
+
+.line {
+  font-family: "Courier New", Courier, monospace;
+  position: fixed;
+  top: 0;
+  right: 70px;
+  height: 100vh;
+  height: 100dvh;
+  width: 2px;
+  z-index: 0;
+  background: var(--accent);
+}
+
+.name-heading {
+  font-size: 15.5vw;
+}
+
+.theme {
+  background: var(--foreground);
+  color: var(--background);
+  border: none;
+  border-radius: 100px;
+  height: 50px;
+  width: 50px;
+  position: absolute;
+  right: 45px;
+  bottom: 2%;
+  font-weight: bold;
+}
+
+.theme:hover {
+  border: 1px solid red;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  transition: 0.5s all;
+}
+
+a:hover {
+  color: var(--hover);
+}
+
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px var(--foreground);
+  border-radius: 10px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: var(--background);
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: var(--hover);
+}
+
+.vedarth {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  font-weight: 100;
+  font-size: 1.5rem;
+  background: var(--background);
+  /* background-color: red; */
+  border-radius: 100px;
+  padding: 20px;
+  /* transform: rotate(-90deg); */
+}
+
+.list-holder {
+  display: flex;
+  flex-direction: column;
+}
+
+.project-list {
+  margin-left: 20px;
+  display: flex;
+  gap: 30px;
+}
+
+.project {
+  margin-top: 100px;
+  margin-bottom: 100px;
+  padding: 40px;
+  width: 650px;
+  object-fit: contain;
+  display: flex;
+  flex-direction: column;
+  gap: 55px;
+  border: 1px solid var(--foreground);
+  border-bottom-right-radius: 30px;
+}
+
+.sub {
+  display: flex;
+  justify-content: space-between;
+  font-size: 1.2rem;
+  /* line-height: 26px; */
+}
+
+.project-link {
+  font-size: 1.8rem;
+  background: none;
+  color: var(--foreground);
+  border: 4px solid var(--foreground);
+  padding: 20px;
+  border-left: 0;
+  border-top: 0;
+  border-radius: 20px;
+  transition: 0.5s ease all;
+}
+
+.project-link:hover {
+  /* border-left: 5px solid var(--foreground); */
+  border-top: 4px solid var(--foreground);
+  border-bottom: 0;
+  /* border-right: 0; */
+  border-color: var(--hover);
+  color: var(--hover);
+}
+
+.project-link i {
+  font-size: 40px;
+}
+
+.sub p i {
+  font-size: 40px;
+  margin-bottom: 20px;
+}
+
+.project-image {
+  border: 3px solid var(--foreground);
+  /* border-radius: 30px; */
+  border-bottom-right-radius: 30px;
+}
+
+::selection {
+  background-color: var(--hover);
+  color: var(--background);
+}
+
+.fixed {
+  position: fixed; /* makes it stay in place */
+  right: 0;
+  top: 0;
+}
+
+.social{
+
+  display:flex;
+  width: 100%;
+  justify-content: center;
+  gap: 9%;
+  /* background: rebeccapurple; */
+}
+
+.social i{
+  font-size: 80px;
+}
+
+.social :hover {
+  color: hotpink;
+}
+
+.social-one{
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
+  display: flex;
+  flex-direction: column;
+}

@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>INNNDEX</title>
+</head>
+
+<style>
+    @font-face {
+        font-family: 'Poiret One';
+        /* Choose a name for your font family */
+        src: local('Poiret One'),
+            /* Optional: checks if font is locally installed */
+            url('./assets/PoiretOne-Regular.ttf') format('truetype'),
+            /* Path to your font file */
+            url('../fonts/myfont.woff') format('woff');
+        /* Include multiple formats for compatibility */
+        font-display: swap;
+        /* Optional: controls font loading behavior */
+    }
+
+    * {
+        margin: 0;
+        padding: 0;
+        font-family: 'Poiret One', cursive;
+
+    }
+
+    .home {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 100vh;
+        height: 100dvh;
+        border: 200px solid black;
+        border-top: none;
+        border-bottom: none;
+        /* background-color: black; */
+        /* color: white; */
+    }
+
+    header .name-heading {
+        text-align: left;
+        margin-left: 5%;
+    }
+
+    footer .name-heading {
+        text-align: right;
+        margin-right: 5%;
+    }
+
+    .mid {
+        display: flex;
+        justify-content: space-around;
+        margin: 0% 1%;
+        border: 2px dashed black;
+        padding: 0 1%;
+        border-style: double;
+        border-right: none;
+        border-left: none;
+    }
+
+    .name-heading {
+        font-size: 15.5vw;
+    }
+
+
+    a {
+        text-decoration: none;
+        color: inherit;
+        padding: 0em 0.5em;
+        transition: 0.5s all;
+    }
+
+    a:hover {
+        color: white;
+        background: black;
+    }
+
+    @media screen and (max-width: 600px) {
+        .home {
+            height: 100dvh;
+            flex-direction: row;
+            /* height: 100vh; */
+        }
+
+        .name-heading {
+            font-size: 18vw;
+            /* 
+        bigger relative size for small screens */
+            text-align: center;
+            /* center instead of left/right */
+
+            writing-mode: vertical-rl;
+            /* writes top-to-bottom */
+            text-orientation: upright;
+            /* keeps letters upright instead of rotated */
+            font-size: 12vw;
+            /* scale nicely on phone */
+            line-height: 1.2em;
+        }
+    }
+</style>
+
+<body class="home">
+    <header>
+        <h1 class="name-heading">
+            VEDARTH
+        </h1>
+    </header>
+    <center class="mid">
+        <!-- <h3>GAME DEVELOPER</h3>
+        <h3>WRITER</h3>
+        <h3>SOFTWARE DEVELOPER</h3>
+        <h3>DESIGNER</h3> -->
+        <h3><a href="">PROJECTS</a></h3>
+        <h3><a href="">WEBSITES</a></h3>
+        <h3><a href="">GAMES</a></h3>
+        <h3><a href="">CONTACT</a></h3>
+        <!-- <h3>PROJECTS</h3>
+        <h3>WEBSITES</h3>
+        <h3>GAMES</h3>
+        <h3>CONTACT</h3> -->
+        <!-- <div>
+            lmfao
+        </div> -->
+    </center>
+    <footer>
+        <h1 class="name-heading">
+            JOSHI
+        </h1>
+    </footer>
+</body>
+
+</html>
